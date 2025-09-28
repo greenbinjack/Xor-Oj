@@ -1,0 +1,305 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 960" width="1450" height="960" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<defs>
+<marker id="one" viewBox="0 0 12 10" refX="10" refY="5" markerWidth="12" markerHeight="10" orient="auto-start-reverse"><path d="M4 0 V10 M7.5 0 V10" stroke="#475569" stroke-width="1.6" fill="none"/></marker>
+<marker id="many" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse"><path d="M11 6 L1 0.5 M11 6 L1 11.5 M11 6 H1" stroke="#475569" stroke-width="1.4" fill="none"/></marker>
+</defs>
+<rect width="1450" height="960" fill="#ffffff"/>
+<text x="30" y="30" font-size="21" font-weight="700" fill="#0f172a">Xor-Oj  Database Schema</text>
+<text x="330" y="30" font-size="13" fill="#64748b" dx="0"></text>
+<path d="M250 91 L330 91" fill="none" stroke="#475569" stroke-width="1.6"  marker-start="url(#many)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M250 191 L330 191" fill="none" stroke="#475569" stroke-width="1.6"  marker-start="url(#many)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M250 326 L330 326" fill="none" stroke="#475569" stroke-width="1.6"  marker-start="url(#many)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M250 601 L290 601 L290 470 L330 470" fill="none" stroke="#475569" stroke-width="1.6"  marker-start="url(#many)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M250 623 L330 623" fill="none" stroke="#475569" stroke-width="1.6"  marker-start="url(#many)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M590 91 L675 91 L675 113 L760 113" fill="none" stroke="#475569" stroke-width="1.6"  marker-start="url(#one)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M1010 91 L1110 91" fill="none" stroke="#475569" stroke-width="1.6"  marker-start="url(#many)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M1010 201 L1110 201" fill="none" stroke="#475569" stroke-width="1.6"  marker-start="url(#many)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M760 223 L690 223 L690 590 L590 590" fill="none" stroke="#475569" stroke-width="1.6"  marker-start="url(#many)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M460 520 L460 560" fill="none" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 5"  marker-end="url(#one)" stroke-linejoin="round"/>
+<text x="468" y="545" font-size="11.5" fill="#475569" text-anchor="start" font-style="italic">author_id</text>
+<path d="M760 623 L590 623" fill="none" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 5" marker-start="url(#many)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M760 667 L650 667 L650 330 L590 330" fill="none" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 5" marker-start="url(#many)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M1030 645 L1070 645 L1070 245 L1110 245" fill="none" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 5" marker-start="url(#many)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M1250 256 L1250 330" fill="none" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 5" marker-start="url(#one)" marker-end="url(#one)" stroke-linejoin="round"/>
+<path d="M1340 256 L1340 300 L1425 300 L1425 935 L460 935 L460 832" fill="none" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 5"  marker-end="url(#one)" stroke-linejoin="round"/>
+<text x="1350" y="292" font-size="11.5" fill="#475569" text-anchor="start" font-style="italic">author_id</text>
+<g>
+<rect x="332" y="563" width="260" height="272" rx="8" fill="#0f172a" opacity="0.08"/>
+<rect x="330" y="560" width="260" height="272" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<path d="M330 590 V568 a8 8 0 0 1 8 -8 H582 a8 8 0 0 1 8 8 V590 Z" fill="#2563eb"/>
+<text x="342" y="580" font-size="14" font-weight="700" fill="#fff">users</text>
+<rect x="338" y="594" width="22" height="15" rx="3" fill="#b45309"/><text x="349" y="605" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<text x="368" y="606" font-size="12.5" fill="#0f172a" font-weight="600">id</text>
+<text x="582" y="606" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="331" y="612" width="258" height="22" fill="#f1f5f9"/>
+<rect x="338" y="616" width="22" height="15" rx="3" fill="#15803d"/><text x="349" y="627" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">UQ</text>
+<text x="368" y="628" font-size="12.5" fill="#0f172a" >username</text>
+<text x="582" y="628" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<rect x="338" y="638" width="22" height="15" rx="3" fill="#15803d"/><text x="349" y="649" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">UQ</text>
+<text x="368" y="650" font-size="12.5" fill="#0f172a" >email</text>
+<text x="582" y="650" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<rect x="331" y="656" width="258" height="22" fill="#f1f5f9"/>
+<text x="368" y="672" font-size="12.5" fill="#0f172a" >password</text>
+<text x="582" y="672" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR (bcrypt)</text>
+<text x="368" y="694" font-size="12.5" fill="#0f172a" >first_name</text>
+<text x="582" y="694" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<rect x="331" y="700" width="258" height="22" fill="#f1f5f9"/>
+<text x="368" y="716" font-size="12.5" fill="#0f172a" >last_name</text>
+<text x="582" y="716" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<text x="368" y="738" font-size="12.5" fill="#0f172a" >bio</text>
+<text x="582" y="738" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<rect x="331" y="744" width="258" height="22" fill="#f1f5f9"/>
+<text x="368" y="760" font-size="12.5" fill="#0f172a" >institute</text>
+<text x="582" y="760" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<text x="368" y="782" font-size="12.5" fill="#0f172a" >country</text>
+<text x="582" y="782" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<rect x="331" y="788" width="258" height="22" fill="#f1f5f9"/>
+<text x="368" y="804" font-size="12.5" fill="#0f172a" >contact</text>
+<text x="582" y="804" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<text x="368" y="826" font-size="12.5" fill="#0f172a" >role</text>
+<text x="582" y="826" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+</g>
+<g>
+<rect x="332" y="53" width="260" height="470" rx="8" fill="#0f172a" opacity="0.08"/>
+<rect x="330" y="50" width="260" height="470" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<path d="M330 80 V58 a8 8 0 0 1 8 -8 H582 a8 8 0 0 1 8 8 V80 Z" fill="#2563eb"/>
+<text x="342" y="70" font-size="14" font-weight="700" fill="#fff">problems</text>
+<rect x="338" y="84" width="22" height="15" rx="3" fill="#b45309"/><text x="349" y="95" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<text x="368" y="96" font-size="12.5" fill="#0f172a" font-weight="600">id</text>
+<text x="582" y="96" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="331" y="102" width="258" height="22" fill="#f1f5f9"/>
+<rect x="338" y="106" width="22" height="15" rx="3" fill="#15803d"/><text x="349" y="117" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">UQ</text>
+<text x="368" y="118" font-size="12.5" fill="#0f172a" >title</text>
+<text x="582" y="118" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<text x="368" y="140" font-size="12.5" fill="#0f172a" >description</text>
+<text x="582" y="140" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">TEXT</text>
+<rect x="331" y="146" width="258" height="22" fill="#f1f5f9"/>
+<text x="368" y="162" font-size="12.5" fill="#0f172a" >input_format</text>
+<text x="582" y="162" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">TEXT</text>
+<text x="368" y="184" font-size="12.5" fill="#0f172a" >output_format</text>
+<text x="582" y="184" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">TEXT</text>
+<rect x="331" y="190" width="258" height="22" fill="#f1f5f9"/>
+<text x="368" y="206" font-size="12.5" fill="#0f172a" >notes</text>
+<text x="582" y="206" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">TEXT</text>
+<text x="368" y="228" font-size="12.5" fill="#0f172a" >sample_input</text>
+<text x="582" y="228" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">TEXT</text>
+<rect x="331" y="234" width="258" height="22" fill="#f1f5f9"/>
+<text x="368" y="250" font-size="12.5" fill="#0f172a" >sample_output</text>
+<text x="582" y="250" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">TEXT</text>
+<text x="368" y="272" font-size="12.5" fill="#0f172a" >problem_num</text>
+<text x="582" y="272" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">INT</text>
+<rect x="331" y="278" width="258" height="22" fill="#f1f5f9"/>
+<rect x="338" y="282" width="30" height="15" rx="3" fill="#94a3b8"/><text x="353" y="293" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">REF</text>
+<text x="376" y="294" font-size="12.5" fill="#0f172a" >author_id</text>
+<text x="582" y="294" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<text x="368" y="316" font-size="12.5" fill="#0f172a" >difficulty_rating</text>
+<text x="582" y="316" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">INT  (800-4000)</text>
+<rect x="331" y="322" width="258" height="22" fill="#f1f5f9"/>
+<text x="368" y="338" font-size="12.5" fill="#0f172a" >solve_count</text>
+<text x="582" y="338" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">INT</text>
+<text x="368" y="360" font-size="12.5" fill="#0f172a" >time_limit</text>
+<text x="582" y="360" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">INT  (ms)</text>
+<rect x="331" y="366" width="258" height="22" fill="#f1f5f9"/>
+<text x="368" y="382" font-size="12.5" fill="#0f172a" >memory_limit</text>
+<text x="582" y="382" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">INT  (KB)</text>
+<text x="368" y="404" font-size="12.5" fill="#0f172a" >status</text>
+<text x="582" y="404" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<rect x="331" y="410" width="258" height="22" fill="#f1f5f9"/>
+<text x="368" y="426" font-size="12.5" fill="#0f172a" >input_file_type</text>
+<text x="582" y="426" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<text x="368" y="448" font-size="12.5" fill="#0f172a" >output_file_type</text>
+<text x="582" y="448" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<rect x="331" y="454" width="258" height="22" fill="#f1f5f9"/>
+<text x="368" y="470" font-size="12.5" fill="#0f172a" >main_solution_path</text>
+<text x="582" y="470" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<text x="368" y="492" font-size="12.5" fill="#0f172a" >checker_path</text>
+<text x="582" y="492" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<rect x="331" y="498" width="258" height="22" fill="#f1f5f9"/>
+<text x="368" y="514" font-size="12.5" fill="#0f172a" >validator_path</text>
+<text x="582" y="514" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+</g>
+<g>
+<rect x="32" y="53" width="220" height="74" rx="8" fill="#0f172a" opacity="0.08"/>
+<rect x="30" y="50" width="220" height="74" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<path d="M30 80 V58 a8 8 0 0 1 8 -8 H242 a8 8 0 0 1 8 8 V80 Z" fill="#0d9488"/>
+<text x="42" y="70" font-size="14" font-weight="700" fill="#fff">problem_tags</text>
+<rect x="38" y="84" width="22" height="15" rx="3" fill="#0369a1"/><text x="49" y="95" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">FK</text>
+<text x="68" y="96" font-size="12.5" fill="#0f172a" >problem_id</text>
+<text x="242" y="96" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="31" y="102" width="218" height="22" fill="#f1f5f9"/>
+<text x="68" y="118" font-size="12.5" fill="#0f172a" >tags</text>
+<text x="242" y="118" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+</g>
+<g>
+<rect x="32" y="153" width="220" height="118" rx="8" fill="#0f172a" opacity="0.08"/>
+<rect x="30" y="150" width="220" height="118" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<path d="M30 180 V158 a8 8 0 0 1 8 -8 H242 a8 8 0 0 1 8 8 V180 Z" fill="#0d9488"/>
+<text x="42" y="170" font-size="14" font-weight="700" fill="#fff">test_files</text>
+<rect x="38" y="184" width="22" height="15" rx="3" fill="#b45309"/><text x="49" y="195" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<rect x="66" y="184" width="22" height="15" rx="3" fill="#0369a1"/><text x="77" y="195" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">FK</text>
+<text x="96" y="196" font-size="12.5" fill="#0f172a" font-weight="600">problem_id</text>
+<text x="242" y="196" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="31" y="202" width="218" height="22" fill="#f1f5f9"/>
+<rect x="38" y="206" width="22" height="15" rx="3" fill="#b45309"/><text x="49" y="217" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<text x="68" y="218" font-size="12.5" fill="#0f172a" font-weight="600">test_id</text>
+<text x="242" y="218" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">INT</text>
+<text x="68" y="240" font-size="12.5" fill="#0f172a" >file_name</text>
+<text x="242" y="240" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<rect x="31" y="246" width="218" height="22" fill="#f1f5f9"/>
+<text x="68" y="262" font-size="12.5" fill="#0f172a" >file_path</text>
+<text x="242" y="262" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+</g>
+<g>
+<rect x="32" y="288" width="220" height="118" rx="8" fill="#0f172a" opacity="0.08"/>
+<rect x="30" y="285" width="220" height="118" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<path d="M30 315 V293 a8 8 0 0 1 8 -8 H242 a8 8 0 0 1 8 8 V315 Z" fill="#0d9488"/>
+<text x="42" y="305" font-size="14" font-weight="700" fill="#fff">generator_files</text>
+<rect x="38" y="319" width="22" height="15" rx="3" fill="#b45309"/><text x="49" y="330" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<rect x="66" y="319" width="22" height="15" rx="3" fill="#0369a1"/><text x="77" y="330" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">FK</text>
+<text x="96" y="331" font-size="12.5" fill="#0f172a" font-weight="600">problem_id</text>
+<text x="242" y="331" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="31" y="337" width="218" height="22" fill="#f1f5f9"/>
+<rect x="38" y="341" width="22" height="15" rx="3" fill="#b45309"/><text x="49" y="352" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<text x="68" y="353" font-size="12.5" fill="#0f172a" font-weight="600">generator_id</text>
+<text x="242" y="353" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">INT</text>
+<text x="68" y="375" font-size="12.5" fill="#0f172a" >file_name</text>
+<text x="242" y="375" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<rect x="31" y="381" width="218" height="22" fill="#f1f5f9"/>
+<text x="68" y="397" font-size="12.5" fill="#0f172a" >file_path</text>
+<text x="242" y="397" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+</g>
+<g>
+<rect x="32" y="563" width="220" height="96" rx="8" fill="#0f172a" opacity="0.08"/>
+<rect x="30" y="560" width="220" height="96" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<path d="M30 590 V568 a8 8 0 0 1 8 -8 H242 a8 8 0 0 1 8 8 V590 Z" fill="#7c3aed"/>
+<text x="42" y="580" font-size="14" font-weight="700" fill="#fff">problem_contributors</text>
+<rect x="38" y="594" width="22" height="15" rx="3" fill="#b45309"/><text x="49" y="605" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<rect x="66" y="594" width="22" height="15" rx="3" fill="#0369a1"/><text x="77" y="605" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">FK</text>
+<text x="96" y="606" font-size="12.5" fill="#0f172a" font-weight="600">problem_id</text>
+<text x="242" y="606" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="31" y="612" width="218" height="22" fill="#f1f5f9"/>
+<rect x="38" y="616" width="22" height="15" rx="3" fill="#b45309"/><text x="49" y="627" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<rect x="66" y="616" width="22" height="15" rx="3" fill="#0369a1"/><text x="77" y="627" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">FK</text>
+<text x="96" y="628" font-size="12.5" fill="#0f172a" font-weight="600">user_id</text>
+<text x="242" y="628" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<text x="68" y="650" font-size="12.5" fill="#0f172a" >role</text>
+<text x="242" y="650" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+</g>
+<g>
+<rect x="762" y="53" width="250" height="74" rx="8" fill="#0f172a" opacity="0.08"/>
+<rect x="760" y="50" width="250" height="74" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<path d="M760 80 V58 a8 8 0 0 1 8 -8 H1002 a8 8 0 0 1 8 8 V80 Z" fill="#7c3aed"/>
+<text x="772" y="70" font-size="14" font-weight="700" fill="#fff">contest_problems</text>
+<rect x="768" y="84" width="22" height="15" rx="3" fill="#0369a1"/><text x="779" y="95" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">FK</text>
+<text x="798" y="96" font-size="12.5" fill="#0f172a" >contest_id</text>
+<text x="1002" y="96" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="761" y="102" width="248" height="22" fill="#f1f5f9"/>
+<rect x="768" y="106" width="22" height="15" rx="3" fill="#0369a1"/><text x="779" y="117" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">FK</text>
+<rect x="796" y="106" width="22" height="15" rx="3" fill="#15803d"/><text x="807" y="117" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">UQ</text>
+<text x="826" y="118" font-size="12.5" fill="#0f172a" >problem_id</text>
+<text x="1002" y="118" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+</g>
+<g>
+<rect x="762" y="163" width="250" height="74" rx="8" fill="#0f172a" opacity="0.08"/>
+<rect x="760" y="160" width="250" height="74" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<path d="M760 190 V168 a8 8 0 0 1 8 -8 H1002 a8 8 0 0 1 8 8 V190 Z" fill="#7c3aed"/>
+<text x="772" y="180" font-size="14" font-weight="700" fill="#fff">contest_participants</text>
+<rect x="768" y="194" width="22" height="15" rx="3" fill="#b45309"/><text x="779" y="205" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<rect x="796" y="194" width="22" height="15" rx="3" fill="#0369a1"/><text x="807" y="205" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">FK</text>
+<text x="826" y="206" font-size="12.5" fill="#0f172a" font-weight="600">contest_id</text>
+<text x="1002" y="206" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="761" y="212" width="248" height="22" fill="#f1f5f9"/>
+<rect x="768" y="216" width="22" height="15" rx="3" fill="#b45309"/><text x="779" y="227" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<rect x="796" y="216" width="22" height="15" rx="3" fill="#0369a1"/><text x="807" y="227" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">FK</text>
+<text x="826" y="228" font-size="12.5" fill="#0f172a" font-weight="600">user_id</text>
+<text x="1002" y="228" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+</g>
+<g>
+<rect x="1112" y="53" width="260" height="206" rx="8" fill="#0f172a" opacity="0.08"/>
+<rect x="1110" y="50" width="260" height="206" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="1.6"/>
+<path d="M1110 80 V58 a8 8 0 0 1 8 -8 H1362 a8 8 0 0 1 8 8 V80 Z" fill="#ea580c"/>
+<text x="1122" y="70" font-size="14" font-weight="700" fill="#fff">contest</text>
+<rect x="1118" y="84" width="22" height="15" rx="3" fill="#b45309"/><text x="1129" y="95" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<text x="1148" y="96" font-size="12.5" fill="#0f172a" font-weight="600">id</text>
+<text x="1362" y="96" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="1111" y="102" width="258" height="22" fill="#f1f5f9"/>
+<text x="1148" y="118" font-size="12.5" fill="#0f172a" >title</text>
+<text x="1362" y="118" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<text x="1148" y="140" font-size="12.5" fill="#0f172a" >description</text>
+<text x="1362" y="140" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR (1000)</text>
+<rect x="1111" y="146" width="258" height="22" fill="#f1f5f9"/>
+<text x="1148" y="162" font-size="12.5" fill="#0f172a" >start_time</text>
+<text x="1362" y="162" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">TIMESTAMP</text>
+<text x="1148" y="184" font-size="12.5" fill="#0f172a" >end_time</text>
+<text x="1362" y="184" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">TIMESTAMP</text>
+<rect x="1111" y="190" width="258" height="22" fill="#f1f5f9"/>
+<rect x="1118" y="194" width="30" height="15" rx="3" fill="#94a3b8"/><text x="1133" y="205" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">REF</text>
+<text x="1156" y="206" font-size="12.5" fill="#0f172a" >author_id</text>
+<text x="1362" y="206" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<text x="1148" y="228" font-size="12.5" fill="#0f172a" >duration</text>
+<text x="1362" y="228" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">INT  (min)</text>
+<rect x="1111" y="234" width="258" height="22" fill="#f1f5f9"/>
+<text x="1148" y="250" font-size="12.5" fill="#0f172a" >status</text>
+<text x="1362" y="250" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR (enum)</text>
+</g>
+<g>
+<rect x="1112" y="333" width="260" height="140" rx="8" fill="#0f172a" opacity="0.08"/>
+<rect x="1110" y="330" width="260" height="140" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="1.6"/>
+<path d="M1110 360 V338 a8 8 0 0 1 8 -8 H1362 a8 8 0 0 1 8 8 V360 Z" fill="#ea580c"/>
+<text x="1122" y="350" font-size="14" font-weight="700" fill="#fff">standings_snapshot</text>
+<rect x="1118" y="364" width="22" height="15" rx="3" fill="#b45309"/><text x="1129" y="375" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<rect x="1146" y="364" width="30" height="15" rx="3" fill="#94a3b8"/><text x="1161" y="375" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">REF</text>
+<text x="1184" y="376" font-size="12.5" fill="#0f172a" font-weight="600">contest_id</text>
+<text x="1362" y="376" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="1111" y="382" width="258" height="22" fill="#f1f5f9"/>
+<text x="1148" y="398" font-size="12.5" fill="#0f172a" >version</text>
+<text x="1362" y="398" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<text x="1148" y="420" font-size="12.5" fill="#0f172a" >payload_json</text>
+<text x="1362" y="420" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">TEXT</text>
+<rect x="1111" y="426" width="258" height="22" fill="#f1f5f9"/>
+<text x="1148" y="442" font-size="12.5" fill="#0f172a" >finalized</text>
+<text x="1362" y="442" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BOOLEAN</text>
+<text x="1148" y="464" font-size="12.5" fill="#0f172a" >updated_at</text>
+<text x="1362" y="464" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">TIMESTAMP</text>
+</g>
+<g>
+<rect x="762" y="563" width="270" height="294" rx="8" fill="#0f172a" opacity="0.08"/>
+<rect x="760" y="560" width="270" height="294" rx="8" fill="#ffffff" stroke="#db2777" stroke-width="1.6"/>
+<path d="M760 590 V568 a8 8 0 0 1 8 -8 H1022 a8 8 0 0 1 8 8 V590 Z" fill="#db2777"/>
+<text x="772" y="580" font-size="14" font-weight="700" fill="#fff">submissions</text>
+<rect x="768" y="594" width="22" height="15" rx="3" fill="#b45309"/><text x="779" y="605" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">PK</text>
+<text x="798" y="606" font-size="12.5" fill="#0f172a" font-weight="600">id</text>
+<text x="1022" y="606" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="761" y="612" width="268" height="22" fill="#f1f5f9"/>
+<rect x="768" y="616" width="30" height="15" rx="3" fill="#94a3b8"/><text x="783" y="627" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">REF</text>
+<text x="806" y="628" font-size="12.5" fill="#0f172a" >user_id</text>
+<text x="1022" y="628" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="768" y="638" width="30" height="15" rx="3" fill="#94a3b8"/><text x="783" y="649" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">REF</text>
+<text x="806" y="650" font-size="12.5" fill="#0f172a" >contest_id</text>
+<text x="1022" y="650" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<rect x="761" y="656" width="268" height="22" fill="#f1f5f9"/>
+<rect x="768" y="660" width="30" height="15" rx="3" fill="#94a3b8"/><text x="783" y="671" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">REF</text>
+<text x="806" y="672" font-size="12.5" fill="#0f172a" >problem_id</text>
+<text x="1022" y="672" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT</text>
+<text x="798" y="694" font-size="12.5" fill="#0f172a" >file_path</text>
+<text x="1022" y="694" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR (255)</text>
+<rect x="761" y="700" width="268" height="22" fill="#f1f5f9"/>
+<text x="798" y="716" font-size="12.5" fill="#0f172a" >language</text>
+<text x="1022" y="716" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR</text>
+<text x="798" y="738" font-size="12.5" fill="#0f172a" >submission_time</text>
+<text x="1022" y="738" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">TIMESTAMP</text>
+<rect x="761" y="744" width="268" height="22" fill="#f1f5f9"/>
+<text x="798" y="760" font-size="12.5" fill="#0f172a" >status</text>
+<text x="1022" y="760" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR (enum)</text>
+<text x="798" y="782" font-size="12.5" fill="#0f172a" >execution_time</text>
+<text x="1022" y="782" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT  (ms)</text>
+<rect x="761" y="788" width="268" height="22" fill="#f1f5f9"/>
+<text x="798" y="804" font-size="12.5" fill="#0f172a" >memory_used</text>
+<text x="1022" y="804" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">BIGINT  (KB)</text>
+<text x="798" y="826" font-size="12.5" fill="#0f172a" >error_message</text>
+<text x="1022" y="826" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">VARCHAR (1000)</text>
+<rect x="761" y="832" width="268" height="22" fill="#f1f5f9"/>
+<text x="798" y="848" font-size="12.5" fill="#0f172a" >score</text>
+<text x="1022" y="848" font-size="11" fill="#64748b" text-anchor="end" font-family="Consolas, Menlo, monospace">INT</text>
+</g>
+</svg>
