@@ -2,6 +2,7 @@
 package com.Judge_Mental.XorOJ.service;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,14 +10,34 @@ import java.util.function.Function;
 
 import javax.crypto.SecretKey;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+import jakarta.annotation.PostConstruct;
 
 @Service
 public class JWTService {
+
+    private static final int MIN_SECRET_BYTES = 32;
+
+    @Value("${jwt.secret}")
+    private String secret;
+
+    private SecretKey key;
+
+    @PostConstruct
+    void initKey() {
+        byte[] bytes = secret == null ? new byte[0] : secret.getBytes(StandardCharsets.UTF_8);
+        if (bytes.length < MIN_SECRET_BYTES) {
+            throw new IllegalStateException(
+                    "JWT_SECRET must be at least " + MIN_SECRET_BYTES + " characters long");
+        }
+        key = Keys.hmacShaKeyFor(bytes);
+    }
+
     String generateToken(String username) {
         Map<String, Object> claims = new HashMap<>();
         return Jwts.builder()
@@ -30,9 +51,8 @@ public class JWTService {
                 .compact();
     }
 
-    private String secret = "q0EPiwaaOxiq6dnW9nC4fK04WHTOMjvF/xxTyO7jxs8=";
     private SecretKey getKey() {
-        return Keys.hmacShaKeyFor(secret.getBytes());
+        return key;
     }
 
     public String extractUsername(String token) {
