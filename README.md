@@ -118,8 +118,6 @@ flowchart LR
 ```
 Xor-Oj/
 ├── Dockerfile                    # Judge sandbox image (gcc:13 + time)
-├── docs/
-│   └── database-schema.svg       # Database diagram
 ├── backend/                      # Spring Boot application
 │   ├── pom.xml
 │   ├── mvnw, mvnw.cmd            # Maven wrapper
@@ -129,7 +127,7 @@ Xor-Oj/
 │           ├── config/           # Security, password encoder, Jackson, scheduling, file storage
 │           ├── controller/       # REST controllers
 │           ├── dto/              # Response shapes (standings, submissions, problem view, ...)
-│           ├── entity/           # JPA entities (+ entity/listener for id generation)
+│           ├── entity/           # JPA entities (+ entity/listener to delete files with their rows)
 │           ├── filter/           # JWTFilter
 │           ├── judge/            # CppExecutor: Docker-based compile and run
 │           ├── repo/             # Spring Data repositories
@@ -154,13 +152,9 @@ Xor-Oj/
 
 ## Database Design
 
-The schema is generated from the JPA entities in [`backend/.../entity`](backend/src/main/java/com/Judge_Mental/XorOJ/entity). Column names are the snake_case form of the Java field names, and the contest table is called `contest` because that entity has no `@Table` annotation.
+Hibernate generates the schema from the JPA entities in [`backend/.../entity`](backend/src/main/java/com/Judge_Mental/XorOJ/entity). Column names are the snake_case form of the Java field names. The contest table is named `contest` (not `contests`) because its entity has no `@Table` annotation.
 
-<p align="center">
-  <img src="docs/database-schema.svg" alt="Entity relationship diagram of the Xor-Oj database" width="100%">
-</p>
-
-The same schema as a text diagram that GitHub renders natively and that is easy to edit:
+In the diagram below, **solid lines** are enforced foreign keys and **dotted lines** are logical references: one table stores another table's id without a database constraint.
 
 ```mermaid
 erDiagram
@@ -285,8 +279,8 @@ erDiagram
 | `problems` | Statement, limits, difficulty, status, and the on-disk paths of the main solution, checker, and validator. |
 | `problem_tags` | One row per tag of a problem (a Hibernate `@ElementCollection`). |
 | `problem_contributors` | Many-to-many link between problems and users, with a per-problem `role`. Composite key `(problem_id, user_id)`. |
-| `test_files` | Input files of a problem. Composite key `(problem_id, test_id)`, where `test_id` is a per-problem counter. |
-| `generator_files` | Generator programs of a problem. Composite key `(problem_id, generator_id)`. |
+| `test_files` | Input files of a problem. Composite key `(problem_id, test_id)`, where `test_id` is a number chosen by the author and unique within the problem. |
+| `generator_files` | Generator programs of a problem. Composite key `(problem_id, generator_id)`, numbered the same way as tests. |
 | `contest` | Title, schedule, and author of a contest. |
 | `contest_problems` | Join table between contests and problems. `problem_id` is unique, so a problem belongs to at most one contest. |
 | `contest_participants` | Registered users of a contest. |
@@ -295,9 +289,9 @@ erDiagram
 
 ### Design notes
 
-- **Composite keys for owned files.** `test_files` and `generator_files` use `(problem_id, counter)` keys. The counter is assigned per problem by entity listeners, so ids start at 1 for every problem.
-- **Cascade deletes.** Deleting a problem removes its contributors, tests, and generators (`ON DELETE CASCADE` plus JPA cascade).
-- **Logical references.** `submissions.user_id / problem_id / contest_id`, `problems.author_id`, `contest.author_id`, and `standings_snapshot.contest_id` are plain numeric columns, not foreign keys. They appear as dashed lines in the diagram. Submission history therefore survives even if a problem or contest is changed or removed, but the database will not stop you from storing an id that does not exist.
+- **Composite keys for owned files.** `test_files` and `generator_files` are keyed by the problem id plus a number the author picks, so every problem has its own test 1, test 2, and so on. Uploading a number that already exists for that problem is rejected.
+- **Cascade deletes.** Deleting a problem also deletes its contributors, tests, and generators, through a database `ON DELETE CASCADE` backed by JPA cascading. Entity listeners remove the matching files from disk when a test or generator row is deleted.
+- **Logical references.** `submissions.user_id / problem_id / contest_id`, `problems.author_id`, `contest.author_id`, and `standings_snapshot.contest_id` are plain numeric columns, not foreign keys, and appear as dotted lines in the diagram. Submission history therefore keeps its ids even if a problem or contest is changed or removed. The trade-off is that the database will not stop you from storing an id that does not exist.
 - **Derived contest status.** `contest.status` is stored for compatibility, but the application computes the real status (`UPCOMING`, `RUNNING`, `ENDED`) from `start_time` and `end_time` on every read.
 - **Files on disk.** Source code, tests, and generators are stored as files under `uploads/`. The database keeps only their paths.
 - **Units.** `time_limit` is in milliseconds and `memory_limit` is in kilobytes (the editor converts to and from megabytes). `execution_time` is in milliseconds and `memory_used` in kilobytes.
@@ -596,8 +590,8 @@ uploads/
 ├── problems/
 │   └── <problemId>/
 │       ├── mainSolution/     # reference solution (.cpp)
-│       ├── tests/            # <n>_input.txt files
-│       └── generators/       # generator programs (.cpp)
+│       ├── tests/            # <testId>_<original file name>
+│       └── generators/       # <generatorId>_<original file name> (.cpp)
 └── submissions/
     └── <userId>_<problemId>_<yyyyMMdd_HHmmss>_<random>.<language>
 ```
