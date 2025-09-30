@@ -418,7 +418,10 @@ Create `backend/.env` (it is git-ignored). `spring-dotenv` reads it when you sta
 POSTGRES_URL=jdbc:postgresql://localhost:5432/xoroj
 POSTGRES_USERNAME=your_username
 POSTGRES_PASSWORD=your_password
+JWT_SECRET=a_long_random_string_of_at_least_32_characters
 ```
+
+A template is provided in [`backend/.env.example`](backend/.env.example). `JWT_SECRET` signs the login tokens, so keep it private and generate your own, for example with `openssl rand -base64 48`. The backend refuses to start if it is missing or shorter than 32 characters. Changing it later signs every user out.
 
 Tables are created automatically on first start.
 
@@ -473,6 +476,7 @@ npm run preview    # serve the built bundle locally
 | Setting | Where | Default |
 | --- | --- | --- |
 | Database URL, user, password | `backend/.env`: `POSTGRES_URL`, `POSTGRES_USERNAME`, `POSTGRES_PASSWORD` | none (required) |
+| JWT signing secret | `backend/.env`: `JWT_SECRET` (at least 32 characters) | none (required) |
 | Backend port | `server.port` in [`application.yml`](backend/src/main/resources/application.yml) | `8081` |
 | Frontend to backend proxy | [`frontend/vite.config.js`](frontend/vite.config.js) | `http://localhost:8081` |
 | Upload directory | `file.upload-dir` | `../uploads` (relative to `backend/`) |
@@ -623,6 +627,7 @@ Xor-Oj is a work in progress. The main gaps today:
 
 | Symptom | Likely cause and fix |
 | --- | --- |
+| Backend fails with `Could not resolve placeholder 'JWT_SECRET'` or `JWT_SECRET must be at least 32 characters long` | Add a `JWT_SECRET` of 32 or more characters to `backend/.env` (see [`backend/.env.example`](backend/.env.example)). |
 | Backend fails with a datasource error | `backend/.env` is missing or not in the directory you start the backend from; check the three `POSTGRES_*` variables. |
 | Every submission is `RUNTIME_ERROR` with a Docker message | Docker is not running, or the `gcc-time:13` image is not built. Run `docker build -t gcc-time:13 .`. |
 | Browser shows network errors on `/api/...` | The backend is not running on port 8081, or `vite.config.js` points at a different port. |
